@@ -1,0 +1,19 @@
+#define degree 255
+void setup(){
+  pinMode(3,OUTPUT);
+  pinMode(8,INPUT);
+}
+void loop(){
+  
+  if(digitalRead(8)==HIGH)
+  {
+  analogWrite(3,degree);
+  
+  
+  digitalWrite(3,LOW);
+  analogWrite(5,degree);
+  
+  digitalWrite(5,LOW);
+  }
+  
+}
