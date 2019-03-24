@@ -1,20 +1,24 @@
-#define degree 255
+#define Degree 255
+#define Led 11
+#define Button 8
+#define Hotpack 5
 void setup(){
-  pinMode(3,OUTPUT);
-  pinMode(8,INPUT);
+  pinMode(Led,OUTPUT);
+  pinMode(Button,INPUT);
 }
 void loop(){
   
-  if(digitalRead(8)==HIGH)
+  if(digitalRead(Button)==HIGH)
   {
-  analogWrite(3,degree);
+  analogWrite(Led,Degree);
   
   
-  digitalWrite(3,LOW);
-  analogWrite(5,degree);
+  digitalWrite(Led,LOW);
+  delay(1000);
+  analogWrite(Hotpack,Degree);
   delay(100000);
   
-  digitalWrite(5,LOW);
+  digitalWrite(Hotpack,LOW);
   }
   
 }
