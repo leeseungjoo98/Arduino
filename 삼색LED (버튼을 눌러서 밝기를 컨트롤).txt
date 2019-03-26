@@ -1,0 +1,36 @@
+#define RED 11
+#define GREEN 10
+#define BLUE 9
+#define RED_B 4
+#define GREEN_B 3
+#define BLUE_B 2
+int r=0,g=0,b=0;
+void setup(){
+  pinMode(RED_B,INPUT);
+  pinMode(GREEN_B,INPUT);
+  pinMode(BLUE_B,INPUT);
+}
+void loop(){
+  if(digitalRead(RED_B)==HIGH){
+    ++r;
+    if(r>255){
+      r=0;
+    }}
+    if(digitalRead(GREEN_B)==HIGH){
+      ++g;
+      if(g>225){
+        g=0;
+      }
+    }
+    if(digitalRead(BLUE_B)==HIGH){
+      ++b;
+      if(b>255){
+        b=0;
+      }}
+      analogWrite(RED,r);
+      analogWrite(GREEN,g);
+      analogWrite(BLUE,b);
+      delay(10);}
+    
+  
+
